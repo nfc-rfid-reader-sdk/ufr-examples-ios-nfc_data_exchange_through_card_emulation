@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iaA-8F-NCb">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1KQ-Vw-pls">
+            <objects>
+                <navigationController id="iaA-8F-NCb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N0L-ku-fI0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FsN-5X-Czx" kind="relationship" relationship="rootViewController" id="kHe-d1-b9t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UXk-wr-jfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="-98"/>
+        </scene>
+        <!--Main View-->
+        <scene sceneID="TbT-TX-XwO">
+            <objects>
+                <viewController id="FsN-5X-Czx" customClass="mainView" customModule="NFC_phone_2_PC_communication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B0D-TV-zB6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y0y-yB-wid">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5r-iO-IHz">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jW-29-Vz6">
+                                                <rect key="frame" x="10" y="0.0" width="223" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="NFC Phone 2 PC communication">
+                                                    <color key="titleColor" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jt-qy-s1w" customClass="DLRadioButton">
+                                                <rect key="frame" x="40" y="58" width="230" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="&quot;Hey PC where are you?&quot;">
+                                                    <color key="titleColor" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                        <color key="value" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="inputSelection:" destination="FsN-5X-Czx" eventType="touchUpInside" id="wUM-H8-ZUF"/>
+                                                    <outletCollection property="otherButtons" destination="IRn-OT-ZX8" id="Z9r-fd-gGo"/>
+                                                    <outletCollection property="otherButtons" destination="f0g-Cb-yUe" id="OOS-WD-iDy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRn-OT-ZX8" customClass="DLRadioButton">
+                                                <rect key="frame" x="40" y="118" width="230" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="&quot;I am iOS phone&quot;">
+                                                    <color key="titleColor" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                        <color key="value" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="inputSelection:" destination="FsN-5X-Czx" eventType="touchUpInside" id="0WU-yP-cOD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0g-Cb-yUe" customClass="DLRadioButton">
+                                                <rect key="frame" x="40" y="178" width="230" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Custom message">
+                                                    <color key="titleColor" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="iconSize">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                                        <color key="value" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="indicatorColor">
+                                                        <color key="value" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="iconOnRight" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="inputSelection:" destination="FsN-5X-Czx" eventType="touchUpInside" id="v2A-Ky-dt4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiU-tq-SA9">
+                                                <rect key="frame" x="40" y="325" width="230" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.54901960780000003" green="0.78039215689999997" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="START"/>
+                                                <connections>
+                                                    <action selector="btnStartClicked:" destination="FsN-5X-Czx" eventType="touchUpInside" id="Sa9-0M-9xr"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u7W-cd-YNl">
+                                                <rect key="frame" x="40" y="220" width="230" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="NGw-ic-ohw"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Wnx-Qm-673"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hVJ-tV-VXb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y0y-yB-wid" firstAttribute="top" secondItem="hVJ-tV-VXb" secondAttribute="top" id="9R8-iY-o5O"/>
+                            <constraint firstItem="Y0y-yB-wid" firstAttribute="bottom" secondItem="hVJ-tV-VXb" secondAttribute="bottom" id="dzA-na-pnC"/>
+                            <constraint firstItem="Y0y-yB-wid" firstAttribute="trailing" secondItem="hVJ-tV-VXb" secondAttribute="trailing" id="hPz-08-BLc"/>
+                            <constraint firstItem="Y0y-yB-wid" firstAttribute="leading" secondItem="hVJ-tV-VXb" secondAttribute="leading" id="rW1-fG-3Ed"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="05P-s0-Q5N"/>
+                    <connections>
+                        <outlet property="btnCustomMessage" destination="f0g-Cb-yUe" id="MGy-ST-76W"/>
+                        <outlet property="btnHeyPC" destination="5jt-qy-s1w" id="obP-1o-ngq"/>
+                        <outlet property="btnIamIOS" destination="IRn-OT-ZX8" id="Z3N-g1-NI3"/>
+                        <outlet property="btnTitle" destination="1jW-29-Vz6" id="JYJ-Mo-qSQ"/>
+                        <outlet property="mainContentView" destination="c5r-iO-IHz" id="cDR-4E-8BB"/>
+                        <outlet property="mainScrollView" destination="Y0y-yB-wid" id="Gk8-ES-yB6"/>
+                        <outlet property="txtMessage" destination="u7W-cd-YNl" id="82z-qJ-fDB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTZ-0A-ayg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="331.8840579710145" y="-98.4375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
